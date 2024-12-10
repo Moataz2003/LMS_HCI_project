@@ -1,0 +1,34 @@
+<!-- <div *ngIf="loading">Loading users...</div>
+<table *ngIf="!loading">
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>Role</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users" >
+      <td>{{ user.email }}</td>
+      <td>{{ user.role }}</td>
+      <td>{{ user.status }}</td>
+      <td>
+        <button *ngIf="!user.approved" (click)="onApproveUser(user.id)">Approve</button>
+        <button (click)="onDeactivateUser(user.id)">Deactivate</button>
+        <button (click)="onDeleteUser(user.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table> -->
+<nav>
+  <ul>
+    <li><a href="/login" >Home</a></li>
+    <li><a href="/user-management" >User Management</a></li>
+    <li><a href="/coursemanagement" >Course Management</a></li>
+    <li><a href="/assigning-students">Assignment Management</a></li>
+  </ul>
+</nav>
+<div class="main">
+
+</div>

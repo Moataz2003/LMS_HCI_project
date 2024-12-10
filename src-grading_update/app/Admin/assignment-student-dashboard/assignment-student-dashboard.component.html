@@ -1,0 +1,35 @@
+<app-admin-dashboard></app-admin-dashboard>
+<div class="assignment-dashboard">
+  <h2>Assign Students to Courses</h2>
+
+  <!-- Select Student -->
+  <label for="students">Select Student:</label>
+  <input
+    id="students"
+    list="students-list"
+    [(ngModel)]="selectedStudentId"
+    placeholder="Search by Student ID or Email"
+  />
+  <datalist id="students-list">
+    <option *ngFor="let student of students" [value]="student.id">
+      {{ student.id}}
+    </option>
+  </datalist>
+
+  <!-- Select Course -->
+  <label for="courses">Select Course:</label>
+  <input
+    id="courses"
+    list="courses-list"
+    [(ngModel)]="selectedCourseId"
+    placeholder="Search by Course Title"
+  />
+  <datalist id="courses-list">
+    <option *ngFor="let course of courses" [value]="course.id">
+      {{ course.title }}
+    </option>
+  </datalist>
+
+  <!-- Assign Button -->
+  <button (click)="assignStudentToCourse()">Assign Student</button>
+</div>

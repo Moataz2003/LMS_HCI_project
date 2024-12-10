@@ -1,0 +1,71 @@
+.dashboard-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+h2 {
+  text-align: center;
+  color: #0d5094;
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin-top: 30px;
+  color: #0056b3;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+select,
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+button:not(:disabled) {
+  background-color: #0d5094;
+  color: #fff;
+}
+
+button:not(:disabled):hover {
+  background-color: #0056b3;
+}
+
+.ng-template p {
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+}
+
+/* Utility Classes */
+.margin-bottom {
+  margin-bottom: 20px;
+}
