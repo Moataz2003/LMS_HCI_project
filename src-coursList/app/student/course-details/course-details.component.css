@@ -1,0 +1,98 @@
+/* Container for the entire content */
+.contain {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Course details section */
+.course-details {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Title of the course */
+.course-details h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Description section */
+.course-details .description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Metadata section */
+.course-details .metadata {
+  margin-bottom: 20px;
+}
+
+.course-details .metadata p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.course-details .metadata strong {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Materials section */
+.course-details .materials {
+  margin-bottom: 20px;
+}
+
+.course-details .materials h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.course-details .materials ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.course-details .materials li {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* Assessments section */
+.course-details .assessments {
+  margin-top: 20px;
+}
+
+.course-details .assessments h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.course-details .assessments ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.course-details .assessments li {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* If no course details are found */
+.contain p {
+  font-size: 1rem;
+  color: #888;
+  text-align: center;
+  margin-top: 50px;
+}

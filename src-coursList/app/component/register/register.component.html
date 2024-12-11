@@ -1,0 +1,82 @@
+<div class="first-page">
+  <div class="app-container">
+    <div class="header">
+      <h1>Welcome to </h1> <h1> E-learning Management System</h1>
+      <p>Learn at your own pace, anytime, anywhere.</p>
+    </div>
+    <div class="form">
+      <div class="register-container">
+        <div class="form-wrapper">
+          <h2>Create a New Account</h2>
+
+          <!-- Register Form -->
+          <form >
+            <!-- <div class="input-group">
+              <label for="role">Role</label>
+              <input type="text" id="role" [(ngModel)]="role" name="role" required placeholder="Enter your role" />
+            </div> -->
+
+            <div class="input-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" [(ngModel)]="email" name="email" required placeholder="Enter your email" />
+            </div>
+
+            <div class="input-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" [(ngModel)]="password" name="password" required placeholder="Create a password" />
+            </div>
+            <div class="input-group">
+              <label for="exampleInputPassword1" class="form-label">Role</label>
+              <input type="text" class="form-control" name="role" placeholder="Enter your role" [(ngModel)]="role">
+            </div>
+
+            <button type="button" class="btn btn-info" (click)="register()">Register</button>
+
+          </form>
+
+          <div class="col-md-6">
+            <a href="/login" style="text-decoration: none;"> Have an Account ?<span class="text-danger"> Login</span></a>
+          </div>
+    </div>
+    <!-- This is where the routed components (Login/Register) will be displayed -->
+  </div>
+
+
+</div>
+<!-- <div class="container-fluid">
+  <div class="row mt-5">
+    <div class="col"></div>
+    <div class="col-4">
+      <div class="card shadow">
+        <div class="card-body">
+          <form>
+            <div class="mb-3">
+              <h4 class="text-dark text-muted">Register</h4>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email</label>
+              <input type="email" class="form-control" name="email" [(ngModel)]="email">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" name="password" [(ngModel)]="password">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Role</label>
+              <input type="text" class="form-control" name="role" [(ngModel)]="role">
+            </div>
+            <button type="button" class="btn btn-info" (click)="register()">Register</button>
+
+            <div class="row">
+<div class="col-md-6">
+<a href="/login" style="text-decoration: none;"> Have an Account ?<span class="text-danger">Login</span></a>
+</div>
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col"></div>
+  </div>
+</div> -->

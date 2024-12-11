@@ -1,0 +1,17 @@
+<app-student-dashboard></app-student-dashboard>
+<div class="progress-tracker">
+  <h2>Your Progress</h2>
+  <ul>
+    <li *ngFor="let progress of progressList">
+      <h3>{{ progress.course }}</h3>
+      <div class="progress-container">
+        <div
+          class="progress-bar"
+          [style.width.%]="progress.completion"
+          [class.complete]="progress.completion === 100">
+        </div>
+      </div>
+      <p>Completion: {{ progress.completion }}%</p>
+    </li>
+  </ul>
+</div>

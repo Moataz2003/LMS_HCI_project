@@ -1,0 +1,10 @@
+<app-student-dashboard></app-student-dashboard>
+<div class="course-list">
+  <h2>Available Courses</h2>
+  <ul>
+    <li *ngFor="let course of courses">
+      <div class="course-title">{{ course.title }}</div>
+      <button routerLink="/student/course-details/{{ course.id }}" class="details-button">View Details</button>
+    </li>
+  </ul>
+</div>

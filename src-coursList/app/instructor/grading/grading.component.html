@@ -1,0 +1,45 @@
+<app-instructor-dashboard></app-instructor-dashboard>
+<div class="grading-container">
+  <h2>Grading</h2>
+
+  <!-- Course Dropdown -->
+  <label for="courseSelect">Select Course:</label>
+  <select
+    id="courseSelect"
+    [(ngModel)]="selectedCourseId"
+    (change)="onCourseSelect()"
+    [disabled]="!instructorCourses.length"
+  >
+    <option *ngFor="let course of instructorCourses" [value]="course.id">{{ course.title }}</option>
+  </select>
+
+  <!-- Assessments Dropdown -->
+  <label for="assessmentSelect">Select Assessment:</label>
+  <select
+    id="assessmentSelect"
+    [(ngModel)]="selectedAssessmentId"
+    (change)="onAssessmentSelect()"
+    [disabled]="!assessments.length"
+  >
+    <option *ngFor="let assessment of assessments" [value]="assessment.id">{{ assessment.title }}</option>
+  </select>
+
+  <!-- Students Dropdown -->
+  <label for="studentSelect">Select Student:</label>
+  <select id="studentSelect" [(ngModel)]="selectedStudentId" [disabled]="!students.length">
+    <option *ngFor="let student of students" [value]="student.studentId">{{ student.studentId }}</option>
+  </select>
+
+  <!-- Grade Input -->
+  <label for="grade">Enter Grade:</label>
+  <input
+    id="grade"
+    type="number"
+    [(ngModel)]="grade"
+    [placeholder]="'Enter Grade'"
+  />
+
+  <!-- Assign Grade -->
+  <button (click)="assignGrade()">Assign Grade</button>
+</div>
+

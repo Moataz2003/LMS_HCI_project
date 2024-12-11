@@ -1,0 +1,65 @@
+/* Navbar Styling */
+
+.navbar {
+  background-color: #16003e; /* Dark background for the navbar */
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ecf0f1;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .nav-links li {
+  margin-left: 20px;
+}
+
+.navbar .nav-links li a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 16px;
+  text-transform: capitalize;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Specific color for cyan links */
+.navbar .cyan a {
+  background-color: #1abc9c; /* Cyan background */
+}
+
+.navbar .cyan a:hover {
+  background-color: #16a085; /* Darker cyan on hover */
+}
+
+/* Specific color for red links */
+.navbar .red a {
+  background-color: #e74c3c; /* Red background */
+}
+
+.navbar .red a:hover {
+  background-color: #c0392b; /* Darker red on hover */
+}
+
+/* Active state for router links */
+.navbar .nav-links li a.active {
+  background-color: #34495e; /* Darker shade for active link */
+}
+
+.navbar .nav-links li a:hover {
+  color: #fff; /* White text on hover */
+}

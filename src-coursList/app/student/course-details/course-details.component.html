@@ -1,0 +1,33 @@
+<app-student-dashboard></app-student-dashboard>
+<div class="contain">
+  <!-- Existing course details section -->
+  <div *ngIf="courseDetails" class="course-details">
+    <h1>{{ courseDetails.title }}</h1>
+    <p class="description">{{ courseDetails.description }}</p>
+    <div class="metadata">
+      <p><strong>Instructor ID:</strong> {{ courseDetails.instructorId }}</p>
+    </div>
+    <div class="materials">
+      <h3>Course Materials</h3>
+      <ul>
+        <li *ngFor="let material of courseDetails.materials">
+          {{ material }}
+        </li>
+      </ul>
+    </div>
+    <!-- Assessments section (show only titles) -->
+    <div class="assessments" *ngIf="assessments && assessments.length > 0">
+      <h3>Assessments</h3>
+      <ul>
+        <li *ngFor="let assessment of assessments">
+          {{ assessment.title }}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Message if no course details are found -->
+  <div *ngIf="!courseDetails">
+    <p>Course not found.</p>
+  </div>
+</div>

@@ -1,0 +1,165 @@
+/* Styling for Register Page */
+.first-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(120deg, #570aaa, #001a45);
+}
+
+.app-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  color: rgb(208, 208, 208);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  padding: 10px 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #84a5de;
+}
+
+.header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-top: 10px;
+}
+
+.form {
+  width: 50%;
+  max-width: 500px;
+}
+
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-wrapper {
+  background-color: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  text-align: center;
+}
+
+.form-wrapper h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-group label {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #2575fc;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: none;
+  background-color: #2575fc;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #6a11cb;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.login-link {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.login-link a {
+  color: #2575fc;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+    width: 90%;
+    padding: 20px;
+  }
+
+  .header {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .header p {
+    font-size: 1rem;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  .form-wrapper {
+    padding: 20px;
+  }
+
+  .form-wrapper h2 {
+    font-size: 1.5rem;
+  }
+}
