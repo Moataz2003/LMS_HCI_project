@@ -141,6 +141,21 @@ export class GradingService {
       )
       .valueChanges({ idField: 'id' });
   }
+
+  getStudentGrade(courseId: string, assessmentId: string, studentId: string): Observable<number | null> {
+    return this.firestore
+      .collection('courses')
+      .doc(courseId)
+      .collection('assessments')
+      .doc(assessmentId)
+      .collection('grades')
+      .doc(studentId)
+      .valueChanges()
+      .pipe(
+        map((data: any) => data?.grade || null) // Extract grade if it exists
+      );
+  }
+
   // getCoursesForStudent(studentId: string) {
   //   return this.firestore
   //     .collection('courses', (ref) => ref.where('studentIds', 'array-contains', studentId))

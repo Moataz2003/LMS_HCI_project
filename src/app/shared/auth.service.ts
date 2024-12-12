@@ -12,6 +12,7 @@ import { switchMap,of } from 'rxjs';
 })
 export class AuthService {
 
+
   constructor(private fireauth:AngularFireAuth,private firestore: AngularFirestore,private router:Router) { }
   private usersCollection = 'users';
   login(email: string, password: string): Promise<void> {
@@ -27,9 +28,14 @@ export class AuthService {
       })
       .then(doc => {
         if (doc.exists) {
-          const userData = doc.data() as { role: string; email: string };
+          const userData = doc.data() as { role: string; email: string,status?: string };
           localStorage.setItem('role', userData?.role);  // Save role in localStorage
           localStorage.setItem('token', 'true');
+
+          if (userData.status === 'deactivated') {
+            //alert('Your account has been deactivated. Please contact support for further assistance.');
+            throw new Error('Your account has been deactivated. Please contact support.');
+          }
 
           // Navigate based on role
           if (userData?.role === 'admin') {

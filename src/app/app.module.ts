@@ -1,6 +1,5 @@
 import { NgModule, Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire/compat';
@@ -33,7 +32,7 @@ import { StudentDashboardComponent } from './student/student-dashboard/student-d
     RegisterComponent,
     DashboardComponent,
     AdminDashboardComponent,
-    CourseManagementComponent, 
+    CourseManagementComponent,
      AddCourseComponent,
      EditCourseComponent,
      UserManagementComponent,

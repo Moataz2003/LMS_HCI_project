@@ -111,4 +111,5 @@ export interface Assessment {
 export interface Student extends User {
    // Array of course IDs the student is enrolled in
   courseGrades?: Record<string, number>; // Map of courseId to the total grade
+  grade: string;
 }

@@ -50,12 +50,16 @@ export class CourseManagementComponent implements OnInit{
 
 
 }
+
 export interface Course {
   id:string ;
   title: string;
   description: string;
   enrolledStudents?: string[];
+  courseGrades?: { [key: string]: string }; // Example structure if needed
   instructorId:string;
   materials?: string[];
   isArchived:boolean;
+  grades?: { [studentId: string]: number }; // Map of student IDs to grades
+
 }

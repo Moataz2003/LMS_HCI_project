@@ -1,17 +1,35 @@
 <app-student-dashboard></app-student-dashboard>
-<div class="progress-tracker">
-  <h2>Your Progress</h2>
-  <ul>
-    <li *ngFor="let progress of progressList">
-      <h3>{{ progress.course }}</h3>
-      <div class="progress-container">
-        <div
-          class="progress-bar"
-          [style.width.%]="progress.completion"
-          [class.complete]="progress.completion === 100">
-        </div>
-      </div>
-      <p>Completion: {{ progress.completion }}%</p>
-    </li>
-  </ul>
+
+<div class="container">
+  <!-- Courses Table -->
+  <div *ngIf="studentCourses.length > 0" class="courses-section">
+    <h2 class="section-title">Your Progress</h2>
+
+    <table class="courses-table">
+      <thead>
+        <tr>
+          <th>Course</th>
+          <th>Progress</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let course of studentCourses">
+          <td>{{ course.title }}</td>
+          <td>
+            <progress
+              class="progress-bar"
+              max="100"
+              [value]="course.grade"
+            ></progress>
+            <span>{{ course.grade }}%</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Message if No Courses -->
+  <div *ngIf="studentCourses.length === 0" class="no-courses">
+    <p>You are not assigned to any courses yet.</p>
+  </div>
 </div>

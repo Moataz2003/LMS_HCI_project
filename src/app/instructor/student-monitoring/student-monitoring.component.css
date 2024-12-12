@@ -1,0 +1,152 @@
+/* General Container Styling */
+.container {
+  margin: 50px auto;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to bottom, #f0f4f8, #e9eff1); /* Soft gradient background */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for container */
+}
+
+/* Course Selector Styling */
+.course-selector {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.label {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-right: 15px;
+}
+
+.dropdown {
+  padding: 10px 15px;
+  font-size: 16px;
+  width: 250px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.dropdown:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Blue glow effect on focus */
+  outline: none;
+}
+
+.dropdown option {
+  padding: 10px;
+}
+
+/* Students Section Styling */
+.students-section {
+  margin-top: 30px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.students-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden; /* Ensures the table corners are rounded */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Table shadow */
+}
+
+.students-table th,
+.students-table td {
+  padding: 14px 20px;
+  text-align: left;
+  font-size: 16px;
+  color: #555;
+}
+
+.students-table th {
+  background-color: #007bff;
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #0056b3; /* Underline header */
+}
+
+.students-table td {
+  background-color: #fff;
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.students-table td:hover {
+  background-color: #f1f1f1; /* Light background on hover */
+}
+
+/* Progress Bar Styling */
+.progress-bar {
+  width: 100px;
+  height: 20px;
+  border-radius: 8px;
+  background-color: #f3f3f3;
+  position: relative;
+}
+
+progress[value] {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 8px;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: #f3f3f3;
+}
+
+progress[value]::-webkit-progress-value {
+  background-color: #4caf50;
+  border-radius: 8px;
+}
+
+/* Message if No Students */
+.no-students {
+  font-size: 18px;
+  color: #ff0000;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 30px;
+  padding: 15px;
+  background-color: #ffe6e6;
+  border-radius: 5px;
+  border: 1px solid #ffcccc;
+  box-shadow: 0 4px 6px rgba(255, 0, 0, 0.1);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .course-selector {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dropdown {
+    width: 100%;
+  }
+
+  .students-table th,
+  .students-table td {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

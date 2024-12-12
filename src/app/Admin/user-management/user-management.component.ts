@@ -35,14 +35,12 @@ export class UserManagementComponent implements OnInit {
       .catch(err => console.error('Error approving user:', err));
   }
 
-  onDeactivateUser(userId: string): void {
-    this.admSrv.deactivateUser(userId)
-      .then(() => {
-        alert('User deactivated successfully!');
-        this.fetchUsers(); // Refresh the user list
-      })
-      .catch(err => console.error('Error deactivating user:', err));
-  }
+  toggleUserStatus(userId: string, currentStatus: 'activated' | 'deactivated'): void {
+    const newStatus = currentStatus === 'activated' ? 'deactivated' : 'activated';
+    this.admSrv.updateUserStatus(userId, newStatus)
+      .then(() => console.log(`User ${newStatus} successfully`))
+      .catch(err => console.error(`Error updating user status to ${newStatus}:`, err));
+  } 
 
   onDeleteUser(userId: string): void {
     if (confirm('Are you sure you want to delete this user?')) {

@@ -1,1 +1,56 @@
 <app-instructor-dashboard></app-instructor-dashboard>
+<div class="container">
+  <!-- Course Selector -->
+  <div class="course-selector">
+    <label for="courseSelect" class="label">Select a Course:</label>
+    <select
+      id="courseSelect"
+      class="dropdown"
+      #courseSelect
+      [value]="selectedCourseId"
+      (change)="onCourseSelect(courseSelect.value)"
+    >
+    <option value="" disabled>Select a course</option>
+    <option hidden *ngFor="let course of instructorCourses" [value]="course.id">
+        {{ course.title }}
+    </option>
+    <option *ngFor="let course of instructorCourses" [value]="course.id">
+        {{ course.title }}
+    </option>
+    </select>
+  </div>
+
+  <!-- Students Table -->
+  <div *ngIf="selectedCourseId && students.length > 0" class="students-section">
+    <h2 class="section-title">
+      Students Progress : {{ getSelectedCourseName() }}
+    </h2>
+
+    <table class="students-table">
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th>Progress</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of students">
+          <td>{{ student.email }}</td>
+          <td>
+            <progress
+              class="progress-bar"
+              max="100"
+              [value]="student.grade"
+            ></progress>
+            <span>{{ student.grade }}%</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Message if No Students -->
+  <div *ngIf="selectedCourseId && students.length === 0" class="no-students">
+    <p>No students are enrolled in this course.</p>
+  </div>
+</div>

@@ -18,9 +18,11 @@ export class CourseService {
   private assessmentsCollection = 'assessments';
   constructor(private firestore: AngularFirestore) {}
   // Get all courses
+
   getCourses(): Observable<any[]> {
     return this.firestore.collection(this.collectionName).valueChanges({ idField: 'id' });
   }
+
   getCourseById(courseId: string): Observable<any> {
     return this.firestore.collection('courses').doc(courseId).valueChanges();
   }
@@ -156,6 +158,15 @@ export class CourseService {
       .valueChanges({ idField: 'id' }).pipe(
         map(courses => courses.filter(course => !course.isArchived))
       );
+  }
+
+
+  getStudentsForCourse(courseId: string): Observable<any[]> {
+    return this.firestore
+      .collection('users', (ref) =>
+        ref.where('enrolledCourses', 'array-contains', courseId)
+      )
+      .valueChanges();
   }
 
   // getCoursesForInstructor(instructorId: string): Observable<Course[]> {
